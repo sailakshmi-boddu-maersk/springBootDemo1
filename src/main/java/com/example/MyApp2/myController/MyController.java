@@ -42,8 +42,9 @@ public class MyController {
 	public Optional<Customer> getCus(@RequestParam int id) {
 		return customerService.getCustomer(id);
 	} 
-	@DeleteMapping("/customers/{id}")
-	public void delCustomer(@RequestParam int id) {
+	@DeleteMapping("/delcustomer/{id}")
+//	@RequestMapping(value = "/customers/{id}", method = RequestMethod.DELETE)
+	public void delCustomer(@PathVariable int id) {
 		customerService.delCustomer(id);
 	}
 	
