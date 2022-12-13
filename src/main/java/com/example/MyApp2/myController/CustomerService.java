@@ -26,5 +26,9 @@ public class CustomerService {
 	public void addCustomer(Customer customer) {
 		customerRepo.save(customer);
 	}
+	
+	public void delCustomer(int id) {
+		customerRepo.deleteById(id);
+	}
 
 }
